@@ -495,6 +495,366 @@ def standard_deviation(numbers: list[float]) -> float:
 
 ---
 
+## 模块 1.2 学习：Chat Mode 实战
+
+### 学习时间
+下午 2:00 - 4:00（2 小时）
+
+### 学习目标
+- 理解 Chat Mode（对话式开发模式）的概念
+- 通过实际项目体验 Chat Mode 的优势
+- 掌握提示词优化技巧
+
+### 学习过程
+
+#### 第一步：理解 Chat Mode 概念
+
+**核心要点**：
+- Chat Mode 是 Claude Code 的默认交互模式
+- 通过多轮对话逐步完善功能
+- 适合需求不明确或需要探索的场景
+
+#### 第二步：实战练习 - 添加高级统计功能
+
+**初始需求**：
+> 我想添加标准差，中位数，方差等一些高级统计函数的功能
+
+**对话式开发流程**：
+
+1. **需求讨论** - 讨论实现方式
+   - 我提供了 4 种实现方式供选择
+   - 用户选择了"混合方式"（最佳学习路径）
+
+2. **逐步实现** - 一个函数接一个函数
+   - 从最简单的 `median` 开始
+   - 然后实现 `variance`
+   - 最后实现 `standard_deviation`
+
+3. **测试验证** - 每步都进行测试
+   - 运行 `math_utils.py` 查看结果
+   - 添加单元测试确保正确性
+   - 最终 11 个测试全部通过
+
+4. **对比学习** - 与标准库对比
+   - 创建 `compare_statistics.py` 对比文件
+   - 对比手动实现 vs `statistics` 模块
+   - 学习各自的优势和适用场景
+
+5. **文档更新** - 更新项目文档
+   - 更新 README.md 添加新功能说明
+   - 更新 `__init__.py` 导出新函数
+   - 版本号升级到 0.2.0
+
+6. **提交代码** - Git 提交
+   - 提交哈希：`7486741`
+   - 清晰的提交信息，记录学习亮点
+
+### Chat Mode 的优势体现
+
+通过这次实战，我深刻体会到 Chat Mode 的优势：
+
+1. **渐进式完善** ✅
+   - 不需要一次性想清楚所有细节
+   - 从简单开始，逐步增加复杂度
+
+2. **即时反馈** ✅
+   - 每一步都能看到结果
+   - 立即发现并修正错误
+
+3. **探索性学习** ✅
+   - 可以尝试不同的实现方式
+   - 对比不同方案的优劣
+
+4. **降低认知负担** ✅
+   - 不需要一次性规划所有代码
+   - 专注于当前的小步骤
+
+### 关键技术学习
+
+#### 1. 中位数算法
+```python
+def median(numbers: list[float]) -> float:
+    if not numbers:
+        return 0
+
+    sorted_numbers = sorted(numbers)
+    n = len(sorted_numbers)
+    mid = n // 2
+
+    if n % 2 == 1:
+        return sorted_numbers[mid]  # 奇数：返回中间值
+    else:
+        return (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2  # 偶数：返回中间两个的平均
+```
+
+#### 2. 方差算法
+```python
+def variance(numbers: list[float]) -> float:
+    if not numbers or len(numbers) < 2:
+        return 0
+
+    avg = average(numbers)
+    squared_deviations = [(x - avg) ** 2 for x in numbers]
+    return sum(squared_deviations) / len(numbers)
+```
+
+#### 3. 标准差算法
+```python
+def standard_deviation(numbers: list[float]) -> float:
+    var = variance(numbers)
+    return var ** 0.5  # 方差的平方根
+```
+
+### 手动实现 vs 标准库对比
+
+| 对比项 | 手动实现 | statistics 模块 |
+|--------|----------|-----------------|
+| **学习价值** | ⭐⭐⭐⭐⭐ 深入理解原理 | ⭐⭐ 了解使用方法 |
+| **代码清晰度** | ⭐⭐⭐⭐ 注释详细，易懂 | ⭐⭐⭐ 优化算法，较复杂 |
+| **性能** | ⭐⭐⭐ 基础实现 | ⭐⭐⭐⭐⭐ 快速选择算法 |
+| **功能完整性** | ⭐⭐⭐ 基础功能 | ⭐⭐⭐⭐⭐ 样本/总体方差等 |
+| **适用场景** | 学习、面试、理解原理 | 生产环境、快速开发 |
+
+### 测试结果
+
+**单元测试**：
+- 原有测试：8 个
+- 新增测试：3 个（median, variance, standard_deviation）
+- 总计：**11 个测试全部通过** ✅
+
+**性能对比**（10000 个数据，运行 100 次）：
+- 我们的实现：0.0074 秒
+- statistics 模块：0.0070 秒
+- 性能差异：约 6%（标准库更快）
+
+### 提交记录
+
+```
+7486741 feat: add advanced statistics functions (median, variance, standard_deviation)
+8487230 chore: add .gitignore for Python project
+424bb2e feat: enhance Python utility library with improvements
+270d7fa feat: add string utility functions
+0730b31 feat: add Python math utility functions
+```
+
+### 学习心得
+
+**Chat Mode 的精髓**：
+> 不是一次性给出完美答案，而是通过对话逐步逼近最佳方案。
+
+**对比学习的价值**：
+> 手动实现让我理解了"怎么做"，标准库让我知道了"为什么这样更好"。
+
+**实践的重要性**：
+> 看懂算法和实现算法是两回事。只有亲手写过，才能真正掌握。
+
+---
+
+## 模块 1.2 掌握程度自评
+
+- [x] 能够理解 Chat Mode 的概念和使用场景
+- [x] 能够通过对话式开发完成功能
+- [x] 理解手动实现 vs 使用标准库的权衡
+- [ ] 能够教给别人（需要更多练习）
+- [ ] 掌握 Plan Mode（未学习）
+
+**模块 1.2 自我评估**: ⭐⭐ (2/3 - 熟练)
+
+---
+
+## 下午额外学习：Git & GitHub 实战
+
+### 学习时间
+下午 4:00 - 6:00（2 小时）
+
+### 学习目标
+- 将整个 claude-learning 项目上传到 GitHub
+- 学习 Git 远程仓库配置
+- 掌握 SSH 密钥配置和使用
+
+### 学习过程
+
+#### 第一步：初始化主项目 Git 仓库
+
+**问题**：之前只在子目录 `claude-pratice` 初始化了 Git
+
+**解决**：
+1. 在主目录 `claude-learning` 初始化 Git 仓库
+2. 创建 `.gitignore` 文件
+3. 添加所有项目文件（24 个文件，6148 行代码）
+4. 提交初始版本
+
+#### 第二步：创建 GitHub 仓库
+
+**步骤**：
+1. 在 GitHub 网站创建 `claude-learning` 仓库
+2. 填写仓库信息（名称、描述）
+3. 添加了 README.md（导致后续冲突）
+
+#### 第三步：配置 SSH 密钥
+
+**遇到的问题**：
+- HTTPS 连接失败（443 端口被阻止）
+- 需要使用 SSH 方式推送
+
+**解决方案**：
+1. 生成 SSH 密钥：`ssh-keygen -t ed25519`
+2. 复制公钥到 GitHub Settings
+3. 测试 SSH 连接：`ssh -T git@github.com`
+4. 修改远程仓库 URL 为 SSH 格式
+5. 强制推送覆盖远程 README
+
+#### 第四步：成功上传
+
+**最终结果**：
+```
+https://github.com/NovelAn/claude-learning
+```
+
+✅ 项目成功上传到 GitHub
+✅ 24 个文件，6148 行代码
+✅ 完整的学习体系和实战项目
+
+### 关键技术学习
+
+#### 1. SSH 密钥生成
+```bash
+ssh-keygen -t ed25519 -C "email@example.com"
+```
+
+#### 2. 配置远程仓库
+```bash
+# HTTPS 方式
+git remote add origin https://github.com/username/repo.git
+
+# SSH 方式（推荐）
+git remote set-url origin git@github.com:username/repo.git
+```
+
+#### 3. 强制推送
+```bash
+git push -u origin main --force
+```
+
+### 学习心得
+
+**Git 的价值**：
+> 版本控制不仅是备份代码，更是记录学习历程的重要工具。每一次提交都是成长的脚印。
+
+**GitHub 的意义**：
+> 代码托管平台让学习成果可以随时访问、分享和协作，是现代开发者的必备技能。
+
+**SSH 的优势**：
+> 相比 HTTPS，SSH 更安全、更方便（不需要每次输入密码），是专业开发者的选择。
+
+---
+
+## 今日完整总结
+
+### 学习模块覆盖
+- ✅ 模块 1.1：核心命令与工作流（案例 1.1.1）
+- ✅ 模块 1.2：交互模式与提示技巧（Chat Mode 实战）
+- ✅ Git & GitHub 实战（项目上传）
+
+### 技能提升
+1. **文件引用语法** - ⭐⭐⭐⭐⭐ 熟练掌握
+2. **Git 工作流** - ⭐⭐⭐⭐⭐ 熟练掌握
+3. **Chat Mode** - ⭐⭐⭐⭐ 理解并实践
+4. **代码测试** - ⭐⭐⭐⭐ 掌握单元测试
+5. **项目文档** - ⭐⭐⭐⭐ 能够编写清晰文档
+6. **GitHub 使用** - ⭐⭐⭐⭐ 掌握基本操作
+7. **SSH 配置** - ⭐⭐⭐ 理解并能配置
+
+### 项目成果
+
+**Python 工具库项目**：
+- **版本**: 0.1.0 → 0.2.0
+- **函数数量**: 8 个 → 11 个
+  - 基础函数：sum, average, max, min
+  - 高级函数：median, variance, standard_deviation
+- **测试覆盖**: 8 个 → 11 个（100% 通过率）
+- **文档**: 完整的 README 和代码注释
+- **对比分析**: 手动实现 vs 标准库
+
+**Claude Code 学习项目**：
+- **文件数**: 24 个
+- **代码行数**: 6148 行
+- **学习阶段**: 6 个完整阶段
+- **实战项目**: 1 个完整项目
+- **学习笔记**: 详细的每日记录
+- **GitHub 仓库**: 已公开托管
+
+### Git 提交统计
+
+**总提交数**: 7 次
+```
+2a1399a feat: initial commit of Claude Code learning project
+5bf8d7c chore: remove __pycache__ from git tracking
+7486741 feat: add advanced statistics functions
+8487230 chore: add .gitignore for Python project
+424bb2e feat: enhance Python utility library with improvements
+270d7fa feat: add string utility functions
+0730b31 feat: add Python math utility functions
+```
+
+### 时间统计
+
+**总学习时长**: 约 6 小时
+- 上午：2 小时（模块 1.1 基础）
+- 下午：2 小时（模块 1.2 Chat Mode）
+- 下午：2 小时（GitHub 实战）
+
+### 最重要的收获
+
+1. **对话式开发的力量**
+   > Chat Mode 让我不再急于求成，而是享受逐步完善的过程。每一步都是稳扎稳打，最终得到更好的结果。
+
+2. **对比学习的价值**
+   > 手动实现 vs 标准库的对比，让我不仅学会了"怎么做"，更理解了"为什么"。这种深度的理解是单纯使用工具无法获得的。
+
+3. **版本控制的意义**
+   > Git 不只是备份工具，更是学习成长的记录仪。每一次提交都记录着当时的理解和思考，回看提交历史就是回顾学习历程。
+
+4. **公开分享的勇气**
+   > 将学习项目上传到 GitHub，意味着愿意接受他人的审视。这种开放态度让我更认真地对待代码质量，也让我更有动力持续改进。
+
+### 待改进之处
+
+1. **Plan Mode 未学习**
+   - 需要学习如何使用计划模式设计系统
+   - 适合复杂项目的架构设计
+
+2. **提示词技巧需加强**
+   - 需要学习如何写更清晰的任务描述
+   - 掌握 SMART 原则应用于提示词
+
+3. **测试覆盖率可以提高**
+   - 当前只有基本的单元测试
+   - 可以添加边界测试、性能测试等
+
+### 明日计划
+
+- [ ] 学习 Plan Mode（计划模式）
+- [ ] 完成案例 1.1.2 或 1.1.3
+- [ ] 学习提示词优化技巧
+- [ ] 添加更多测试用例
+
+---
+
 **记录时间**: 2025-12-30
-**学习时长**: 约 4 小时
+**学习时长**: 约 6 小时
 **心情指数**: ⭐⭐⭐⭐⭐ (5/5)
+**成就感**: ⭐⭐⭐⭐⭐ (5/5)
+
+---
+
+## 🎉 今日成就解锁
+
+- 🏆 完成 Claude Code 第一个完整学习日
+- 🚀 成功上传项目到 GitHub
+- 💡 掌握 Chat Mode 对话式开发
+- 📊 实现完整的 Python 工具库
+- 🔐 配置 SSH 密钥并理解其原理
+- 📝 记录详细的学习笔记
+
+**今天是最棒的学习日！继续保持！** 💪✨
