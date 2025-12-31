@@ -1,10 +1,14 @@
 """
-  数学工具函数库
-  提供常用的数学计算功能
-  """
+数学工具函数库
+提供常用的数学计算功能
+"""
+
+from typing import Optional
+from decorators import validate_non_empty
 
 
-def sum_numbers(numbers: list[float]) -> float:
+@validate_non_empty(return_value=0)
+def sum_numbers(numbers: Optional[list[float]]) -> float:
     """
     计算列表中所有数字的总和
 
@@ -12,14 +16,13 @@ def sum_numbers(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        总和，如果列表为空则返回 0
+        总和，如果列表为空或 None 则返回 0
     """
-    if not numbers:
-        return 0
     return sum(numbers)
 
 
-def average(numbers: list[float]) -> float:
+@validate_non_empty(return_value=0)
+def average(numbers: Optional[list[float]]) -> float:
     """
     计算列表中数字的平均值
 
@@ -27,14 +30,13 @@ def average(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        平均值，如果列表为空则返回 0
+        平均值，如果列表为空或 None 则返回 0
     """
-    if not numbers:
-        return 0
     return sum(numbers) / len(numbers)
 
 
-def find_max(numbers: list[float]) -> float:
+@validate_non_empty(return_value=0)
+def find_max(numbers: Optional[list[float]]) -> float:
     """
     找出列表中的最大值
 
@@ -42,14 +44,13 @@ def find_max(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        最大值，如果列表为空则返回 0
+        最大值，如果列表为空或 None 则返回 0
     """
-    if not numbers:
-        return 0
     return max(numbers)
 
 
-def find_min(numbers: list[float]) -> float:
+@validate_non_empty(return_value=0)
+def find_min(numbers: Optional[list[float]]) -> float:
     """
     找出列表中的最小值
 
@@ -57,14 +58,13 @@ def find_min(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        最小值，如果列表为空则返回 0
+        最小值，如果列表为空或 None 则返回 0
     """
-    if not numbers:
-        return 0
     return min(numbers)
 
 
-def median(numbers: list[float]) -> float:
+@validate_non_empty(return_value=0)
+def median(numbers: Optional[list[float]]) -> float:
     """
     计算列表的中位数
 
@@ -76,7 +76,7 @@ def median(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        中位数，如果列表为空则返回 0
+        中位数，如果列表为空或 None 则返回 0
 
     示例:
         >>> median([1, 3, 5])
@@ -84,9 +84,6 @@ def median(numbers: list[float]) -> float:
         >>> median([1, 3, 5, 7])
         4.0
     """
-    if not numbers:
-        return 0
-
     # 步骤1: 对列表进行排序（创建副本，不修改原列表）
     sorted_numbers = sorted(numbers)
     n = len(sorted_numbers)
@@ -105,7 +102,7 @@ def median(numbers: list[float]) -> float:
         return (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2
 
 
-def variance(numbers: list[float]) -> float:
+def variance(numbers: Optional[list[float]]) -> float:
     """
     计算列表的方差
 
@@ -116,7 +113,7 @@ def variance(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        方差，如果列表为空或只有一个元素则返回 0
+        方差，如果列表为空、None 或只有一个元素则返回 0
 
     示例:
         >>> variance([1, 2, 3, 4, 5])
@@ -136,7 +133,7 @@ def variance(numbers: list[float]) -> float:
     return sum(squared_deviations) / len(numbers)
 
 
-def standard_deviation(numbers: list[float]) -> float:
+def standard_deviation(numbers: Optional[list[float]]) -> float:
     """
     计算列表的标准差
 
@@ -147,7 +144,7 @@ def standard_deviation(numbers: list[float]) -> float:
         numbers: 数字列表
 
     返回:
-        标准差，如果列表为空或只有一个元素则返回 0
+        标准差，如果列表为空、None 或只有一个元素则返回 0
 
     示例:
         >>> standard_deviation([1, 2, 3, 4, 5])

@@ -3,8 +3,12 @@
 提供常用的字符串处理功能
 """
 
+from typing import Optional
+from decorators import validate_string_not_empty
 
-def reverse_string(text: str) -> str:
+
+@validate_string_not_empty(return_value="")
+def reverse_string(text: Optional[str]) -> str:
     """
     反转字符串
 
@@ -12,12 +16,13 @@ def reverse_string(text: str) -> str:
         text: 要反转的字符串
 
     返回:
-        反转后的字符串
+        反转后的字符串，如果输入为空或 None 则返回空字符串
     """
     return text[::-1]  # Python 切片语法，反转字符串
 
 
-def capitalize_words(text: str) -> str:
+@validate_string_not_empty(return_value="")
+def capitalize_words(text: Optional[str]) -> str:
     """
     将每个单词的首字母大写
 
@@ -25,12 +30,12 @@ def capitalize_words(text: str) -> str:
         text: 输入字符串
 
     返回:
-        首字母大写的字符串
+        首字母大写的字符串，如果输入为空或 None 则返回空字符串
     """
     return text.title()
 
 
-def count_words(text: str) -> int:
+def count_words(text: Optional[str]) -> int:
     """
     统计字符串中的单词数量
 
@@ -38,13 +43,16 @@ def count_words(text: str) -> int:
         text: 输入字符串
 
     返回:
-        单词数量
+        单词数量，如果输入为空或 None 则返回 0
     """
+    if not text:
+        return 0
     words = text.split()  # 按空格分割字符串
     return len(words)
 
 
-def remove_extra_spaces(text: str) -> str:
+@validate_string_not_empty(return_value="")
+def remove_extra_spaces(text: Optional[str]) -> str:
     """
     移除字符串中多余的空格
 
@@ -52,7 +60,7 @@ def remove_extra_spaces(text: str) -> str:
         text: 输入字符串
 
     返回:
-        移除多余空格后的字符串
+        移除多余空格后的字符串，如果输入为空或 None 则返回空字符串
     """
     return ' '.join(text.split())
 
