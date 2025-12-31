@@ -1,0 +1,285 @@
+{
+  "analyzed_at": "2025-12-31T17:35:09.636878",
+  "total_articles": 3,
+  "total_content_chars": 4040,
+  "keywords": [
+    {
+      "word": "泡泡",
+      "score": 0.11541400047295743
+    },
+    {
+      "word": "市场",
+      "score": 0.10322240897371693
+    },
+    {
+      "word": "董事会",
+      "score": 0.09256491090283084
+    },
+    {
+      "word": "投票权",
+      "score": 0.07618663379566168
+    },
+    {
+      "word": "股东",
+      "score": 0.0743183301155351
+    },
+    {
+      "word": "深度",
+      "score": 0.07205753401891829
+    },
+    {
+      "word": "吴光正",
+      "score": 0.06878462314672038
+    },
+    {
+      "word": "集团",
+      "score": 0.06805884192110473
+    },
+    {
+      "word": "品牌",
+      "score": 0.06250794853867664
+    },
+    {
+      "word": "公司",
+      "score": 0.05644255375157652
+    },
+    {
+      "word": "破发",
+      "score": 0.055027698517376294
+    },
+    {
+      "word": "协议",
+      "score": 0.05477072953279632
+    },
+    {
+      "word": "家族",
+      "score": 0.05424727473518987
+    },
+    {
+      "word": "股价",
+      "score": 0.0526589339873878
+    },
+    {
+      "word": "欧元",
+      "score": 0.051068281784395854
+    },
+    {
+      "word": "执行官",
+      "score": 0.04905293005920598
+    },
+    {
+      "word": "首席",
+      "score": 0.04667042022759493
+    },
+    {
+      "word": "增长",
+      "score": 0.04394918846444189
+    },
+    {
+      "word": "情绪",
+      "score": 0.04181930274214039
+    },
+    {
+      "word": "续签",
+      "score": 0.04080979094464902
+    }
+  ],
+  "topics": [
+    {
+      "name": "市场",
+      "article_count": 3,
+      "sample_articles": [
+        {
+          "title": "Lululemon CEO 难产",
+          "account": "马上关注"
+        },
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        },
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "品牌",
+      "article_count": 3,
+      "sample_articles": [
+        {
+          "title": "Lululemon CEO 难产",
+          "account": "马上关注"
+        },
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        },
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "公司",
+      "article_count": 3,
+      "sample_articles": [
+        {
+          "title": "Lululemon CEO 难产",
+          "account": "马上关注"
+        },
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        },
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "董事会",
+      "article_count": 2,
+      "sample_articles": [
+        {
+          "title": "Lululemon CEO 难产",
+          "account": "马上关注"
+        },
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "股东",
+      "article_count": 2,
+      "sample_articles": [
+        {
+          "title": "Lululemon CEO 难产",
+          "account": "马上关注"
+        },
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        }
+      ]
+    },
+    {
+      "name": "深度",
+      "article_count": 2,
+      "sample_articles": [
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        },
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "泡泡",
+      "article_count": 1,
+      "sample_articles": [
+        {
+          "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+          "account": "马上关注"
+        }
+      ]
+    },
+    {
+      "name": "投票权",
+      "article_count": 1,
+      "sample_articles": [
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        }
+      ]
+    },
+    {
+      "name": "吴光正",
+      "article_count": 1,
+      "sample_articles": [
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        }
+      ]
+    },
+    {
+      "name": "集团",
+      "article_count": 1,
+      "sample_articles": [
+        {
+          "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+          "account": "Drizzie"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "total_articles": 3,
+    "total_accounts": 2,
+    "top_accounts": [
+      {
+        "account": "马上关注",
+        "count": 2
+      },
+      {
+        "account": "Drizzie",
+        "count": 1
+      }
+    ],
+    "avg_content_length": 1346,
+    "min_content_length": 1126,
+    "max_content_length": 1486,
+    "time_range": {}
+  },
+  "publication_patterns": {
+    "top_accounts_by_volume": [
+      {
+        "account": "马上关注",
+        "count": 2
+      },
+      {
+        "account": "Drizzie",
+        "count": 1
+      }
+    ],
+    "total_accounts": 2
+  },
+  "insights": [
+    "最热门话题是「市场」，共 3 篇相关文章",
+    "本次分析涵盖 2 个公众号",
+    "文章内容适中，平均字数约1000-2000",
+    "核心关键词为「泡泡」"
+  ],
+  "articles_summary": [
+    {
+      "id": "AjCHp-kgo1dw",
+      "title": "Lululemon CEO 难产",
+      "account": "马上关注",
+      "publish_time": "Unknown",
+      "content_length": 1126
+    },
+    {
+      "id": "v6vbPyR-JOVQ",
+      "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+      "account": "Drizzie",
+      "publish_time": "Unknown",
+      "content_length": 1486
+    },
+    {
+      "id": "P4AXmUS4pyOA",
+      "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+      "account": "马上关注",
+      "publish_time": "Unknown",
+      "content_length": 1426
+    }
+  ]
+}

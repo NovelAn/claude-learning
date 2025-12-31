@@ -1,0 +1,23 @@
+{
+  "fetched_at": "2025-12-31T17:34:13.528335",
+  "total_urls": 3,
+  "successful": 3,
+  "failed": 0,
+  "articles": [
+    {
+      "id": "8e56549c7c82",
+      "title": "突发 | Ferragamo与中国长期伙伴股东协议到期不续",
+      "url": "https://mp.weixin.qq.com/s/nNhtCWVzgkv6vbPyR-JOVQ"
+    },
+    {
+      "id": "8328fa7f52b1",
+      "title": "Lululemon CEO 难产",
+      "url": "https://mp.weixin.qq.com/s/Ggf3HzkOp8AjCHp-kgo1dw"
+    },
+    {
+      "id": "8f2645a035f1",
+      "title": "Labubu二手价大幅跳水，泡泡玛特股价大跌5%",
+      "url": "https://mp.weixin.qq.com/s/b_s1ZK2h5-P4AXmUS4pyOA"
+    }
+  ]
+}
