@@ -1,0 +1,26 @@
+# 敏感配置文件
+.env
+config.json
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+env/
+ENV/
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 数据文件（如果包含敏感信息）
+# projects/wechat-daily-data/
+
+# 日志文件
+*.log
